@@ -15,154 +15,214 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
 @prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
-@prefix wear: <http://purl.org/wear/> .
+@prefix wide: <http://purl.org/wide/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://purl.org/wear/> a skos:Concept, skos:ConceptScheme;
+<http://purl.org/wide/> a skos:Concept, skos:ConceptScheme;
   dct:creator <https://orcid.org/0000-0003-4124-9040>;
-  dct:description "A classification of wind turbine materials"@en;
+  dct:description "A classification of models used in wind energy"@en;
   dct:rights <https://spdx.org/licenses/CC0-1.0>;
-  dct:title "Wind Energy mAteRials (WEAR) Taxonomy"@en;
+  dct:title "WInd energy moDEls (WIDE) Taxonomy"@en;
   pav:createdOn "2017-09-01T12:00+02:00"@en;
   pav:lastUpdatedOn "2021-10-05T12:00+02:00"@en;
   pav:version "0.1.0"@en;
-  skos:hasTopConcept <http://purl.org/wear/>, wear:Blades, wear:Drivetrain, wear:Tower,
-    wear:TransformerAndInductor;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:topConceptOf <http://purl.org/wear/> .
+  skos:hasTopConcept <http://purl.org/wide/>, wide:AerolasticModels, wide:ElectricalModels,
+    wide:FinancialModels, wide:FlowModels, wide:MeteorologicalModels, wide:OceanographicModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:topConceptOf <http://purl.org/wide/> .
 
-wear:Blades a skos:Concept;
-  skos:definition "A collection of terms related to materials used for the wind turbine blade production."@en;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:narrower wear:Compositelaminate, wear:Gealcoats, wear:SandwichStructure;
-  skos:prefLabel "Blades"@en;
-  skos:topConceptOf <http://purl.org/wear/> .
+wide:MeteorologicalModels a skos:Concept;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:narrower wide:GCM, wide:Hindcast, wide:Mesoscale;
+  skos:prefLabel "Meteorological Models"@en;
+  skos:topConceptOf <http://purl.org/wide/> .
 
-wear:Tower a skos:Concept;
-  skos:definition "A collection of terms related to materials used for the wind tower production."@en;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:narrower wear:Concrete, wear:Steel, wear:Wood;
-  skos:prefLabel "Tower"@en;
-  skos:topConceptOf <http://purl.org/wear/> .
+wide:OceanographicModels a skos:Concept;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:narrower wide:HydrodynamicModels, wide:WaveModels;
+  skos:prefLabel "Oceanographic Models"@en;
+  skos:topConceptOf <http://purl.org/wide/> .
 
-wear:Drivetrain a skos:Concept;
-  skos:definition "A collection of terms related to materials used for the wind turbine drivetrain production."@en;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:narrower wear:Aluminium, wear:Cableinsulation, wear:Castiron, wear:Concrete,
-    wear:Magnets, wear:Steel;
-  skos:prefLabel "Drivetrain"@en;
-  skos:topConceptOf <http://purl.org/wear/> .
+wide:HydrodynamicModels a skos:Concept;
+  skos:broader wide:OceanographicModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:narrower wide:MorisonEquation, wide:Radiation-Diffraction;
+  skos:prefLabel "Hydrodynamic Models"@en .
 
-wear:TransformerAndInductor a skos:Concept;
-  skos:definition "A collection of terms related to materials used for the wind turbine transformer and industor production."@en;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:narrower wear:Aluminium, wear:AmorphousAlloy, wear:Cobalt-iron, wear:Copper,
-    wear:Ferrite, wear:Insulation, wear:Laminatedsteelsheets, wear:Nanocrystalline, wear:Nickel-iron,
-    wear:Powdercore, wear:Powderiron, wear:Siliconsteel;
-  skos:prefLabel "Transformer And Inductor"@en;
-  skos:topConceptOf <http://purl.org/wear/> .
+wide:WaveModels a skos:Concept;
+  skos:broader wide:OceanographicModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:narrower wide:FullyNonlinear, wide:Linear, wide:SecondOrder;
+  skos:prefLabel "Wave Models"@en .
 
-wear:Compositelaminate a skos:Concept;
-  skos:broader wear:Blades;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:prefLabel "Composite laminate"@en .
+wide:FlowModels a skos:Concept;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:narrower wide:Analytical, wide:DNS, wide:LES, wide:Linearized, wide:Physical,
+    wide:RANS, wide:VortexMethod;
+  skos:prefLabel "Flow Models"@en;
+  skos:topConceptOf <http://purl.org/wide/> .
 
-wear:SandwichStructure a skos:Concept;
-  skos:broader wear:Blades;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:prefLabel "Sandwich Structure"@en .
+wide:AerolasticModels a skos:Concept;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:narrower wide:FEM;
+  skos:prefLabel "Aerolastic Models"@en;
+  skos:topConceptOf <http://purl.org/wide/> .
 
-wear:Gealcoats a skos:Concept;
-  skos:broader wear:Blades;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:prefLabel "Geal coats"@en .
+wide:ElectricalModels a skos:Concept;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:narrower wide:ContingencyAnalysisModels, wide:DynamicModels, wide:HarmonicModels,
+    wide:OPF, wide:PowerFlow, wide:PowerProtectionAnalysisModels, wide:ShortCircuitModels,
+    wide:Small-SignalModels, wide:StateEstimation;
+  skos:prefLabel "Electrical Models"@en;
+  skos:topConceptOf <http://purl.org/wide/> .
 
-wear:Steel a skos:Concept;
-  skos:broader wear:Drivetrain, wear:Tower;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:prefLabel "Steel"@en .
+wide:FinancialModels a skos:Concept;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:narrower wide:BoS, wide:IRR, wide:LCOE, wide:NPV;
+  skos:prefLabel "Financial Models"@en;
+  skos:topConceptOf <http://purl.org/wide/> .
 
-wear:Concrete a skos:Concept;
-  skos:broader wear:Drivetrain, wear:Tower;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:prefLabel "Concrete"@en .
+wide:GCM a skos:Concept;
+  skos:broader wide:MeteorologicalModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "GCM"@en .
 
-wear:Wood a skos:Concept;
-  skos:broader wear:Tower;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:prefLabel "Wood"@en .
+wide:Mesoscale a skos:Concept;
+  skos:broader wide:MeteorologicalModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "Mesoscale"@en .
 
-wear:Aluminium a skos:Concept;
-  skos:broader wear:Drivetrain, wear:TransformerAndInductor;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:prefLabel "Aluminium"@en .
+wide:Hindcast a skos:Concept;
+  skos:broader wide:MeteorologicalModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "Hindcast"@en .
 
-wear:Cableinsulation a skos:Concept;
-  skos:broader wear:Drivetrain;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:prefLabel "Cable insulation"@en .
+wide:MorisonEquation a skos:Concept;
+  skos:broader wide:HydrodynamicModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "Morison Equation"@en .
 
-wear:Magnets a skos:Concept;
-  skos:broader wear:Drivetrain;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:prefLabel "Magnets"@en .
+wide:Radiation-Diffraction a skos:Concept;
+  skos:broader wide:HydrodynamicModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "Radiation-Diffraction"@en .
 
-wear:Castiron a skos:Concept;
-  skos:broader wear:Drivetrain;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:prefLabel "Cast iron"@en .
+wide:Linear a skos:Concept;
+  skos:broader wide:WaveModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "Linear"@en .
 
-wear:Copper a skos:Concept;
-  skos:broader wear:TransformerAndInductor;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:prefLabel "Copper"@en .
+wide:SecondOrder a skos:Concept;
+  skos:broader wide:WaveModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "Second Order"@en .
 
-wear:Insulation a skos:Concept;
-  skos:broader wear:TransformerAndInductor;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:prefLabel "Insulation"@en .
+wide:FullyNonlinear a skos:Concept;
+  skos:broader wide:WaveModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "Fully Nonlinear"@en .
 
-wear:Laminatedsteelsheets a skos:Concept;
-  skos:broader wear:TransformerAndInductor;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:prefLabel "Laminated steel sheets"@en .
+wide:Linearized a skos:Concept;
+  skos:broader wide:FlowModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "Linearized"@en .
 
-wear:Siliconsteel a skos:Concept;
-  skos:broader wear:TransformerAndInductor;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:prefLabel "Silicon steel"@en .
+wide:RANS a skos:Concept;
+  skos:broader wide:FlowModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "RANS"@en .
 
-wear:Nickel-iron a skos:Concept;
-  skos:broader wear:TransformerAndInductor;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:prefLabel "Nickel-iron"@en .
+wide:LES a skos:Concept;
+  skos:broader wide:FlowModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "LES"@en .
 
-wear:Cobalt-iron a skos:Concept;
-  skos:broader wear:TransformerAndInductor;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:prefLabel "Cobalt-iron"@en .
+wide:DNS a skos:Concept;
+  skos:broader wide:FlowModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "DNS"@en .
 
-wear:AmorphousAlloy a skos:Concept;
-  skos:broader wear:TransformerAndInductor;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:prefLabel "Amorphous Alloy"@en .
+wide:VortexMethod a skos:Concept;
+  skos:broader wide:FlowModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "Vortex Method"@en .
 
-wear:Nanocrystalline a skos:Concept;
-  skos:broader wear:TransformerAndInductor;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:prefLabel "Nanocrystalline"@en .
+wide:Analytical a skos:Concept;
+  skos:broader wide:FlowModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "Analytical"@en .
 
-wear:Powdercore a skos:Concept;
-  skos:broader wear:TransformerAndInductor;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:prefLabel "Powder core"@en .
+wide:Physical a skos:Concept;
+  skos:broader wide:FlowModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "Physical"@en .
 
-wear:Powderiron a skos:Concept;
-  skos:broader wear:TransformerAndInductor;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:prefLabel "Powder iron"@en .
+wide:FEM a skos:Concept;
+  skos:broader wide:AerolasticModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "FEM"@en .
 
-wear:Ferrite a skos:Concept;
-  skos:broader wear:TransformerAndInductor;
-  skos:inScheme <http://purl.org/wear/>;
-  skos:prefLabel "Ferrite"@en .
+wide:PowerFlow a skos:Concept;
+  skos:broader wide:ElectricalModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "Power Flow"@en .
+
+wide:OPF a skos:Concept;
+  skos:broader wide:ElectricalModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "OPF"@en .
+
+wide:Small-SignalModels a skos:Concept;
+  skos:broader wide:ElectricalModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "Small-Signal Models"@en .
+
+wide:DynamicModels a skos:Concept;
+  skos:broader wide:ElectricalModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "Dynamic Models"@en .
+
+wide:ShortCircuitModels a skos:Concept;
+  skos:broader wide:ElectricalModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "Short Circuit Models"@en .
+
+wide:StateEstimation a skos:Concept;
+  skos:broader wide:ElectricalModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "State Estimation"@en .
+
+wide:PowerProtectionAnalysisModels a skos:Concept;
+  skos:broader wide:ElectricalModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "Power Protection Analysis Models"@en .
+
+wide:ContingencyAnalysisModels a skos:Concept;
+  skos:broader wide:ElectricalModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "Contingency Analysis Models"@en .
+
+wide:HarmonicModels a skos:Concept;
+  skos:broader wide:ElectricalModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "Harmonic Models"@en .
+
+wide:BoS a skos:Concept;
+  skos:broader wide:FinancialModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "BoS"@en .
+
+wide:NPV a skos:Concept;
+  skos:broader wide:FinancialModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "NPV"@en .
+
+wide:LCOE a skos:Concept;
+  skos:broader wide:FinancialModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "LCOE"@en .
+
+wide:IRR a skos:Concept;
+  skos:broader wide:FinancialModels;
+  skos:inScheme <http://purl.org/wide/>;
+  skos:prefLabel "IRR"@en .
