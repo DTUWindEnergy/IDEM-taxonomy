@@ -1,12 +1,13 @@
-ConceptScheme URI,http://purl.org/wide/,Main GUPRI (i.e. PID) under which all terms are defined. Preference is to use PURLs or W3IDs as they provide permanent resolvable identifiers if they are properly configured and managed.
+ConceptScheme URI,http://purl.org/idem/,Main GUPRI (i.e. PID) under which all terms are defined. Preference is to use PURLs or W3IDs as they provide permanent resolvable identifiers if they are properly configured and managed.
 "Prefixes for controlled vocabularies, schema and ontologies"
-PREFIX,wide,http://purl.org/wide/,Prefix for our controlled vocabulary since it is rather tedious to write long URLs all the time
+PREFIX,idem,http://purl.org/idem/,Prefix for our controlled vocabulary since it is rather tedious to write long URLs all the time
 PREFIX,skos,http://www.w3.org/2004/02/skos/core#,Prefix for SKOS Onotlogy is which our base for defining SKOS based controlled vocabulary
 PREFIX,pav,http://purl.org/pav/ ,"Prefix for Provenance, Authoring and Versioning Onotlogy which properties such as version and createdOn we will use to describe our controlled vocabulary"
 PREFIX,dct,http://purl.org/dc/terms/ ,"Prefix for Dublin Core (Terms) Ontology which properties such as title, description, rights, source, etc. we will use to describe our controlled vocabulary as well to define its terms"
 Metadata about vocabulary
 
-dct:title,WInd energy moDEls (WIDE) Taxonomy,Title of the vocabulary
+dct:title,"IDEM: wInD Energy Models
+",Title of the vocabulary
 dct:description,A classification of models used in wind energy,Description of the controlled vocabulary
 dct:creator,https://orcid.org/0000-0003-4124-9040,An ORCID ID of the vocabulary creator
 dct:rights,https://spdx.org/licenses/CC0-1.0,License under which the vocabulary is provided
@@ -16,41 +17,41 @@ pav:lastUpdatedOn,2021-10-05T12:00+02:00,Date of the last vocabulary update
 Definition of terms (optionally properties)
 
 Identifier,skos:prefLabel@en,"skos:altLabel(separator="";"")",skos:definition@en,"dct:source(separator="","")","skos:broader(separator="","")","skos:exactMatch(separator="","")","skos:closeMatch(separator="","")",skos:editorialNote@en,"dct:creator(separator="","")","dct:contributor(separator="","")"
-wide:MeteorologicalModels,Meteorological Models
-wide:OceanographicModels,Oceanographic Models
-wide:HydrodynamicModels,Hydrodynamic Models,,,,wide:OceanographicModels
-wide:WaveModels,Wave Models,,,,wide:OceanographicModels
-wide:FlowModels,Flow Models
-wide:AerolasticModels,Aerolastic Models
-wide:ElectricalModels,Electrical Models
-wide:FinancialModels,Financial Models
-wide:GCM,GCM,,,,wide:MeteorologicalModels
-wide:Mesoscale,Mesoscale,,,,wide:MeteorologicalModels
-wide:Hindcast,Hindcast,,,,wide:MeteorologicalModels
-wide:MorisonEquation,Morison Equation,,,,wide:HydrodynamicModels
-wide:Radiation-Diffraction,Radiation-Diffraction,,,,wide:HydrodynamicModels
-wide:Linear,Linear,,,,wide:WaveModels
-wide:SecondOrder,Second Order,,,,wide:WaveModels
-wide:FullyNonlinear,Fully Nonlinear,,,,wide:WaveModels
-wide:Linearized,Linearized,,,,wide:FlowModels
-wide:RANS,RANS,,,,wide:FlowModels
-wide:LES,LES,,,,wide:FlowModels
-wide:DNS,DNS,,,,wide:FlowModels
-wide:VortexMethod,Vortex Method,,,,wide:FlowModels
-wide:Analytical,Analytical,,,,wide:FlowModels
-wide:Physical,Physical,,,,wide:FlowModels
-wide:FEM,FEM,,,,wide:AerolasticModels
-wide:PowerFlow,Power Flow,,,,wide:ElectricalModels
-wide:OPF,OPF,,,,wide:ElectricalModels
-wide:Small-SignalModels,Small-Signal Models,,,,wide:ElectricalModels
-wide:DynamicModels,Dynamic Models,,,,wide:ElectricalModels
-wide:ShortCircuitModels,Short Circuit Models,,,,wide:ElectricalModels
-wide:StateEstimation,State Estimation,,,,wide:ElectricalModels
-wide:PowerProtectionAnalysisModels,Power Protection Analysis Models,,,,wide:ElectricalModels
-wide:ContingencyAnalysisModels,Contingency Analysis Models,,,,wide:ElectricalModels
-wide:HarmonicModels,Harmonic Models,,,,wide:ElectricalModels
-wide:BoS,BoS,,,,wide:FinancialModels
-wide:NPV,NPV,,,,wide:FinancialModels
-wide:LCOE,LCOE,,,,wide:FinancialModels
-wide:IRR,IRR,,,,wide:FinancialModels
-wide:
+idem:MeteorologicalModels,Meteorological Models
+idem:OceanographicModels,Oceanographic Models
+idem:HydrodynamicModels,Hydrodynamic Models,,,,idem:OceanographicModels
+idem:WaveModels,Wave Models,,,,idem:OceanographicModels
+idem:FlowModels,Flow Models
+idem:AerolasticModels,Aerolastic Models
+idem:ElectricalModels,Electrical Models
+idem:FinancialModels,Financial Models
+idem:GCM,GCM,,,,idem:MeteorologicalModels
+idem:Mesoscale,Mesoscale,,,,idem:MeteorologicalModels
+idem:Hindcast,Hindcast,,,,idem:MeteorologicalModels
+idem:MorisonEquation,Morison Equation,,,,idem:HydrodynamicModels
+idem:Radiation-Diffraction,Radiation-Diffraction,,,,idem:HydrodynamicModels
+idem:Linear,Linear,,,,idem:WaveModels
+idem:SecondOrder,Second Order,,,,idem:WaveModels
+idem:FullyNonlinear,Fully Nonlinear,,,,idem:WaveModels
+idem:Linearized,Linearized,,,,idem:FlowModels
+idem:RANS,RANS,,,,idem:FlowModels
+idem:LES,LES,,,,idem:FlowModels
+idem:DNS,DNS,,,,idem:FlowModels
+idem:VortexMethod,Vortex Method,,,,idem:FlowModels
+idem:Analytical,Analytical,,,,idem:FlowModels
+idem:Physical,Physical,,,,idem:FlowModels
+idem:FEM,FEM,,,,idem:AerolasticModels
+idem:PowerFlow,Power Flow,,,,idem:ElectricalModels
+idem:OPF,OPF,,,,idem:ElectricalModels
+idem:Small-SignalModels,Small-Signal Models,,,,idem:ElectricalModels
+idem:DynamicModels,Dynamic Models,,,,idem:ElectricalModels
+idem:ShortCircuitModels,Short Circuit Models,,,,idem:ElectricalModels
+idem:StateEstimation,State Estimation,,,,idem:ElectricalModels
+idem:PowerProtectionAnalysisModels,Power Protection Analysis Models,,,,idem:ElectricalModels
+idem:ContingencyAnalysisModels,Contingency Analysis Models,,,,idem:ElectricalModels
+idem:HarmonicModels,Harmonic Models,,,,idem:ElectricalModels
+idem:BoS,BoS,,,,idem:FinancialModels
+idem:NPV,NPV,,,,idem:FinancialModels
+idem:LCOE,LCOE,,,,idem:FinancialModels
+idem:IRR,IRR,,,,idem:FinancialModels
+idem:
