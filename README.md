@@ -1,6 +1,6 @@
-[![CI](https://github.com/DTUWindEnergy/WIDE-taxonomy/workflows/Sheet2RDF/badge.svg)](https://github.com/DTUWindEnergy/WIDE-taxonomy/actions?query=workflow%3ASheet2RDF)
+[![CI](https://github.com/DTUWindEnergy/IDEM-taxonomy/workflows/Sheet2RDF/badge.svg)](https://github.com/DTUWindEnergy/IDEM-taxonomy/actions?query=workflow%3ASheet2RDF)
 
-# [WIDE: WInd energy moDEls Taxonomy](http://purl.org/wide/)
+# [IDEM: wInD Energy mMdels Taxonomy](http://purl.org/idem/)
 
 Controlled vocabularies such as taxonomies allow an accurate and controlled approach in describing datasets. One of such controlled vocabulary is Wind Energy Taxonomy of Models. This taxonomy is the result of EERA JP WIND IRPWind Open Data initiative that took place in 2017 in which wind energy experts generated the first version of the taxonomy as an input for defining and structuring [wind energy metadata](https://zenodo.org/record/4013191).
 
@@ -11,7 +11,7 @@ https://www.zenodo.org/record/1493874#.XSD7TaeQ3RY
 
 In 2021, the taxonomy was converted into FAIR machine-actionable controlled vocabulary using [sheet2rdf](https://github.com/fair-data-collective/sheet2rdf).  The controlled vocabulary is served to humans and machines using an instace of [OntoStack](http://data.windenergy.dtu.dk/ontologies/view/) hosted by DTU Wind Energy. `sheet2rdf` and `OntoStack` are developed by [FAIR Data Collective](http://fairdatacollective.org).
 
-Additionally, in 2021, the persistent URL [purl.org/wide](http://purl.org/wide) has been registered for the taxonomy. This allows us to: 
+Additionally, in 2021, the persistent URL [purl.org/idem](http://purl.org/idem) has been registered for the taxonomy. This allows us to: 
 1. If there is a needed to move the taxonomy to another domain (currently under data.windenergy.dtu.dk) URLs will be still resolvable and unchanged
 2. Use short URls as PIDs for the taxonomy terms and properties.
 
